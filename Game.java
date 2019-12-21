@@ -57,14 +57,10 @@ public class Game {
 
             // Update screen
             Field.draw(cars);
-
-
-
         }
     }
 
     private void moveAllCars(Car[] cars) {
-
 
        for(int i = 0; i < cars.length; i++){
 
@@ -80,8 +76,6 @@ public class Game {
            }
 
 
-
-
            // if car gets out of width length restarts from initial column position
            if(cars[i].getPos().getCol() == Field.getWidth()+1){
 
@@ -90,7 +84,6 @@ public class Game {
            if(cars[i].getPos().getCol() == -1){
                cars[i].resetCarCol(Field.getWidth());
            }
-
 
 
            // if car gets out of height length restarts from initial height position
@@ -103,32 +96,9 @@ public class Game {
                cars[i].resetCarRow(Field.getHeight());  // st
            }
 
-
            cars[i].move();
 
-
-
-
-         /*  if(cars[i] instanceof Mustang){
-
-               cars[i].moveCarRight();
-               cars[i].moveCarDown();
-           }
-
-           if(i % 2 == 0){
-               cars[i].moveCarRight();
-
-               if(RNG() == 0){
-                   cars[i].moveCarDown();
-               }
-           }
-           else cars[i].moveCarDown();*/
-
-
        }
-
-
-
     }
 
     private static int RNG(){
